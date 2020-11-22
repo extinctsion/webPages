@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Using the WebCam</title>
+   <meta charset="utf-8"/>
+   <script>
+       navigator.mediaDevices.getUserMedia({
+    audio: false,
+    video: true
+}).then(function(stream) {
+    var video = document.createElement('video');
+    document.body.appendChild(video);
+    video.srcObject = stream;
+    video.play();
+}).catch(err => {
+  console.log(err)
+})
+   </script>
+
+   <style>
+     
+   </style>
+
+</head>
+<body>
+<h3>This is live video from Aditya Sharma</h3>
+  
+</body>
+</html>

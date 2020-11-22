@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Plotting functions in JavaScript using the 
+    function plot library</title>
+  <meta charset="utf-8"/>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+  <style>
+      div {
+  float: left;
+}
+
+#myFunction {
+  padding: 25px;
+  width: auto;
+  height: auto;
+}
+
+  </style>
+  
+   
+
+ 
+</head>
+<body>
+    <h1>This is the graph made by me.</h1>
+  <div id="myFunction"></div>
+  <script>
+         var parameters = {
+  target: '#myFunction',
+  data: [{
+    fn: 'sin(x)', 
+    color: 'red'
+ },
+   { fn: 'cos(x)',
+    color: 'violet'  },
+    { fn: 'tan(x)',
+    color: 'green'  }    
+        ],
+  grid: true,
+  yAxis: {domain: [-1, 1]},
+  xAxis: {domain: [0, 2*Math.PI]}
+};
+
+functionPlot(parameters);
+  </script>
+</body>
+</html>
