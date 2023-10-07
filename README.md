@@ -1,2 +1,4 @@
 # webPages
-In this rep, u can find various html dummy pages taht u can use or implement in ur projects...
+Find numerous <HTML> dummy pages, in this repository, that you can use or implement in your projects. 
+
+Go have fun :))
