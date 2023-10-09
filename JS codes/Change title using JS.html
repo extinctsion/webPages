@@ -7,8 +7,8 @@
   <style>
     body {
       transition: background-color 0.3s ease;
-      background-color: #fff; /* Default background color for light theme */
-      color: #333; /* Default text color for light theme */
+      background-color: #fff; 
+      color: #333; 
     }
 
     h1 {
@@ -48,21 +48,19 @@
     /* Dark theme styles */
     body.dark-mode {
       background-color: #333;
-      color: #fff; /* Text color for dark theme */
+      color: #fff; 
     }
 
     body.dark-mode h1 {
-      color: #ff8c00; /* Adjust heading color for dark theme */
+      color: #ff8c00; 
     }
 
     body.dark-mode button {
       background-color: #555;
-     
     }
 
     body.dark-mode button:hover {
       background-color: #777;
-    
     }
   </style>
 
@@ -75,6 +73,16 @@
     function toggleDarkMode() {
       var body = document.body;
       body.classList.toggle("dark-mode");
+
+      
+      var toggleButton = document.querySelector('#toggleButton');
+      var clickMeButton = document.querySelector('#clickMeButton');
+
+      
+      toggleButton.textContent = body.classList.contains('dark-mode') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+
+      
+      clickMeButton.disabled = body.classList.contains('dark-mode');
     }
   </script>
 </head>
@@ -82,7 +90,7 @@
   <p>This is an example of interactivity between JavaScript and the HTML content of a document.</p>
   <h1 id="mainTitle">My home page</h1>
 
-  <button onclick="changeTitle();">Click me to change the title of the page</button>
-  <button  onclick="toggleDarkMode();">Toggle Dark Mode</button>
+  <button id="clickMeButton" onclick="changeTitle();">Click me to change the title of the page</button>
+  <button id="toggleButton" onclick="toggleDarkMode();">Toggle Dark Mode</button>
 </body>
 </html>
